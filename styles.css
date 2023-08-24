@@ -355,6 +355,7 @@ template {
 :root {
   --header-first-row: 68px;
   --main-first-row: 80px;
+  --main-gap-and-padding: 20px;
 }
 
 .container {
@@ -392,6 +393,9 @@ template {
 
 .left {
   display: grid;
+  gap: var(--main-gap-and-padding);
+  padding: var(--main-gap-and-padding);
+  padding-right: calc(var(--main-gap-and-padding)/2);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: var(--main-first-row) 1fr 1fr 1fr;
 }
@@ -406,5 +410,8 @@ template {
 
 .right {
   display: grid;
+  gap: var(--main-gap-and-padding);
+  padding: var(--main-gap-and-padding);
+  padding-left: calc(var(--main-gap-and-padding)/2);
   grid-template-rows: var(--main-first-row) 1fr var(--main-first-row) 1fr;
 }
