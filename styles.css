@@ -369,12 +369,23 @@ template {
   border: solid black 2px;
 }
 
+/* Sets top and right padding for edge of screen elms */
+.container > .header, .container > .main {
+  padding-right: calc(1.5*var(--main-gap-and-padding));
+}
+
+.container > .sidebar, .container > .header {
+  padding-top: var(--main-gap-and-padding);
+}
+
 .sidebar {
   grid-area: 1 / 1 / 3 / 2;
+  padding: var(--main-gap-and-padding);
   display: flex;
   flex-direction: column;
   justify-content: start;
   gap: 60px;
+  background-color: #1992d4;
 }
 
 .dashboard {
@@ -396,9 +407,12 @@ ul {
 
 .header {
   grid-area: 1 / 2 / 2 / 3;
+  padding-left: var(--main-gap-and-padding);
+  padding-bottom: calc(0.5* var(--main-gap-and-padding));
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: var(--header-first-row) 1fr;
+  background-color: white;
 }
 
 .header > * {
@@ -413,14 +427,16 @@ ul {
 
 .main {
   grid-area: 2 / 2 / 3 / 3;
+  padding: var(--main-gap-and-padding);
   display: grid;
   grid-template-columns: 1fr 280px;
+  background-color: #e2e8f0;
 }
 
 .left {
   display: grid;
   gap: var(--main-gap-and-padding);
-  padding: var(--main-gap-and-padding);
+  /* padding: var(--main-gap-and-padding); */
   padding-right: calc(var(--main-gap-and-padding)/2);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: var(--main-first-row) 1fr 1fr 1fr;
@@ -437,7 +453,6 @@ ul {
 .right {
   display: grid;
   gap: var(--main-gap-and-padding);
-  padding: var(--main-gap-and-padding);
   padding-left: calc(var(--main-gap-and-padding)/2);
   grid-template-rows: var(--main-first-row) 1fr var(--main-first-row) 1fr;
 }
