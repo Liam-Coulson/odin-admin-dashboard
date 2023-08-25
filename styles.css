@@ -377,7 +377,7 @@ template {
   gap: 60px;
 }
 
-.icon {
+.dashboard {
   height: var(--header-first-row);
   font-size: 32px;
   font-weight: bold;
@@ -400,6 +400,13 @@ ul {
   grid-template-columns: 2fr 1fr;
   grid-template-rows: var(--header-first-row) 1fr;
 }
+
+.header > * {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .sidebar > *, .header > *, .main > * {
   border: solid red 2px;
 }
