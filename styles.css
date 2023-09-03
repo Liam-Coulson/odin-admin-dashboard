@@ -430,6 +430,10 @@ ul {
   border: solid red 2px;
 }
 
+.sidebar div {
+  color: white;
+}
+
 .main {
   grid-area: 2 / 2 / 3 / 3;
   padding: var(--main-gap-and-padding);
@@ -441,7 +445,6 @@ ul {
 .left {
   display: grid;
   gap: var(--main-gap-and-padding);
-  /* padding: var(--main-gap-and-padding); */
   padding-right: calc(var(--main-gap-and-padding)/2);
   grid-template-columns: 1fr 1fr;
   grid-template-rows: var(--main-first-row) 1fr 1fr 1fr;
@@ -458,8 +461,10 @@ ul {
   font-weight: bold;
 }
 
-.item {
+.item, .announcements, .trending {
   padding: var(--main-gap-and-padding);
+  background-color: white;
+  border-radius: 8px;
 }
 
 h3 {
@@ -476,10 +481,6 @@ h3 {
   gap: var(--main-gap-and-padding);
   padding-left: calc(var(--main-gap-and-padding)/2);
   grid-template-rows: var(--main-first-row) 1fr var(--main-first-row) 1fr;
-}
-
-.announcements, .trending {
-  padding: var(--main-gap-and-padding);
 }
 
 h4 {
