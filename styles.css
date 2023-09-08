@@ -354,7 +354,7 @@ template {
 
 :root {
   --header-first-row: 74px;
-  --main-first-row: 80px;
+  --main-first-row: 60px;
   --main-gap-and-padding: 20px;
   --title-font-size: 24px;
   --pfp-width: 45px;
