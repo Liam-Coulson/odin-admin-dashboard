@@ -502,7 +502,7 @@ ul {
 
 .file-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 20px;
 }
 
@@ -515,6 +515,12 @@ ul {
   border: none;
   border-radius: 18px;
   padding: 10px;
+}
+
+.file-buttons > .image-credit {
+  /* background-color: #d41944; */
+  background-color: #ba4c20;
+  cursor: pointer;
 }
 
 /* .sidebar > *, .header > *, .main > * {
@@ -598,6 +604,10 @@ p {
 
 .right p {
   font-size: 14px;
+}
+
+hr {
+  margin: 15px;
 }
 
 .trending {
